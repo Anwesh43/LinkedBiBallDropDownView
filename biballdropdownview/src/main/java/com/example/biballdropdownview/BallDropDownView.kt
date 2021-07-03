@@ -19,7 +19,7 @@ val colors : Array<Int> = arrayOf(
 }.toTypedArray()
 val parts : Int = 4
 val scGap : Float = 0.02f / parts
-val rFactor : Float = 7.8f
+val rFactor : Float = 13.8f
 val delay : Long = 20
 val backColor : Int = Color.parseColor("#BDBDBD")
 val rot : Float = 90f
@@ -41,8 +41,8 @@ fun Canvas.drawBallDropDown(scale : Float, w : Float, h : Float, paint : Paint) 
     rotate(rot * sc3)
     for (j in 0..1) {
         save()
-        scale(1f - 2 * j, 1f)
-        drawCircle(l * sc2, 0f, r * sc1, paint)
+        scale(1f, 1f - 2 * j)
+        drawCircle(0f, l * sc2, r * sc1, paint)
         restore()
     }
     restore()
